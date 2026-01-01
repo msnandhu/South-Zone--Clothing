@@ -1,7 +1,8 @@
 :root {
     --bg-color: #0a0a0a;
     --text-color: #ffffff;
-    --accent-color: #ff3b3b; /* Reddish accent from "South Zone" branding often associated with strength/boldness, can affect based on actual logo color */
+    --accent-color: #ff3b3b;
+    /* Reddish accent from "South Zone" branding often associated with strength/boldness, can affect based on actual logo color */
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -87,9 +88,17 @@ body::before {
 
 /* Animations */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes fadeInUp {
@@ -97,6 +106,7 @@ body::before {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -104,8 +114,13 @@ body::before {
 }
 
 @keyframes expandLine {
-    from { width: 0; }
-    to { width: 60px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60px;
+    }
 }
 
 /* Responsive */
@@ -113,8 +128,28 @@ body::before {
     .main-text {
         font-size: 2.5rem;
     }
-    
+
     .logo {
         max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .main-text {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .sub-text {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        max-width: 150px;
+        margin-bottom: 1.5rem;
     }
 }
